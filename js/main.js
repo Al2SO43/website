@@ -390,19 +390,8 @@ let styleContent = `
 color: rgb(30,152,255);
 `
 let title1 = '『硫酸铝的个人网站』'
-let title2 = `
-
-██████╗ ██╗   ██╗██╗    ██╗██╗███╗   ██╗██████╗ 
-██╔══██╗╚██╗ ██╔╝██║    ██║██║████╗  ██║██╔══██╗
-██████╔╝ ╚████╔╝ ██║ █╗ ██║██║██╔██╗ ██║██║  ██║
-██╔══██╗  ╚██╔╝  ██║███╗██║██║██║╚██╗██║██║  ██║
-██████╔╝   ██║   ╚███╔███╔╝██║██║ ╚████║██████╔╝
-╚═════╝    ╚═╝    ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚═════╝               
-`
-let content = `
-博客:  https://bolo.wuhobin.top
-Github:  https://github.com/wuhobin
-`
+let title2 = `Powered by Al2(SO4)3`
+let content = `Hello World!`
 console.log(`%c${title1} %c${title2}
 %c${content}`, styleTitle1, styleTitle2, styleContent)
 
@@ -430,11 +419,10 @@ function updateTimer() {
 }
 setInterval(updateTimer, 1000);
 updateTimer();
-
+function getWeather() {
 fetch('https://api.oioweb.cn/api/weather/GetWeather')
   .then(response => response.json())
   .then(data => {
-    // 提取所需信息
     const city = data.result.city.Province;
     const Degree = data.result.condition.max_degree;
     const windPower = data.result.condition.day_wind_power;
@@ -442,7 +430,6 @@ fetch('https://api.oioweb.cn/api/weather/GetWeather')
     const weather = data.result.condition.day_weather_short;
     const mindegree = data.result.condition.min_degree;
 
-    // 在页面中显示所需信息
     document.getElementById('city_text').innerText = `${city}丨`;
     document.getElementById('wea_text').innerText = `${weather}`;
     document.getElementById('tem_text').innerText = `${mindegree}°C-${Degree}°C`;
@@ -450,6 +437,5 @@ fetch('https://api.oioweb.cn/api/weather/GetWeather')
     document.getElementById('win_speed').innerText = `${windPower}级`;
   })
   .catch(console.error);
-
-// 调用getWeather函数
+}
 getWeather();
