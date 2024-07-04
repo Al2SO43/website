@@ -47,19 +47,18 @@
     <!-- <script src="./js/Meting.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <!-- IE Out -->
     <script>
-        if ( /*@cc_on!@*/ false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href =
-            "https://al2so43.github.io/update/?referrer=https://al2so43.github.io/update" + encodeURIComponent(window.location.href);
-
+        if ( /*@cc_on!@*/ false || (!!window.MSInputMethodContext && !!document.documentMode)) {
+            var currentUrl = window.location.href;
+            var encodedUrl = encodeURIComponent(currentUrl);
+            window.location.href = "./update/index.html?redirect=" + encodedUrl;
+        }
+    
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
+    
         gtag('config', 'G-2WVH35V11W');
-    </script>
-    <!-- PWA -->
-    <link rel="manifest" href="./manifest.json" />
-    <!-- 51.LA 统计 -->
-    <script src="./js/51LA.js"></script>
+    </script>     
 </head>
 
 <body>
@@ -219,7 +218,7 @@
                             <div id="page1">
                             <div class="row">
                                 <div class="col">
-                                    <a id="link-url-1" href="https://al2so43.github.io/start/" target="_blank">
+                                    <a id="link-url-1" href="./site/start/index.html" target="_blank">
                                         <div class="link-card cards">
                                             <i id="link-icon-1" class="fa-solid fa-search"></i>
                                             <span class="link-name" id="link-name-1">硫酸铝的起始站</span>
@@ -227,17 +226,17 @@
                                     </a>
                                 </div>
                                 <div class="col 2">
-                                    <a id="link-url-2" href="https://al2so43.github.io/download/" target="_blank">
+                                    <a id="link-url-2" href="./site/download/index.html" target="_blank">
                                         <div class="link-card cards">
-                                            <i id="link-icon-2" class="fa-solid fa-cloud-download"></i>
+                                            <i id="link-icon-2" class="fa-solid fa-cloud"></i>
                                             <span class="link-name" id="link-name-2">硫酸铝的下载站</span>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col">
-                                    <a id="link-url-3" href="https://al2so43.github.io/hot/" target="_blank">
+                                    <a id="link-url-3" href="./site/hot/index.html" target="_blank">
                                         <div class="link-card cards">
-                                            <i id="link-icon-3" class="fa-solid fa-arrow-circle-up"></i>
+                                            <i id="link-icon-3" class="fa-solid fa-fire"></i>
                                             <span class="link-name" id="link-name-3">硫酸铝的热榜站</span>
                                         </div>
                                     </a>
@@ -246,7 +245,7 @@
                             <!--第二组-->
                             <div class="row" style="margin-top: 1.5rem;">
                                 <div class="col">
-                                    <a id="link-url-4" href="https://al2so43.github.io/blog/" target="_blank">
+                                    <a id="link-url-4" href="./site/blog/index.html" target="_blank">
                                         <div class="link-card cards">
                                             <i id="link-icon-4" class="fa-solid fa-blog"></i>
                                             <span class="link-name" id="link-name-4">硫酸铝的博客站</span>
@@ -254,15 +253,15 @@
                                     </a>
                                 </div>
                                 <div class="col 2">
-                                    <a id="link-url-5" href="https://al2so43.github.io/code/" target="_blank">
+                                    <a id="link-url-5" href="./site/code/index.html" target="_blank">
                                         <div class="link-card cards">
-                                            <i id="link-icon-5" class="fa-solid fa-file-code"></i>
+                                            <i id="link-icon-5" class="fa-solid fa-code"></i>
                                             <span class="link-name" id="link-name-5">硫酸铝的代码站</span>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col">
-                                    <a id="link-url-6" href="https://al2so43.github.io/news/" target="_blank">
+                                    <a id="link-url-6" href="./site/news/index.html" target="_blank">
                                         <div class="link-card cards">
                                             <i id="link-icon-6" class="fa-solid fa-newspaper"></i>
                                             <span class="link-name" id="link-name-6">硫酸铝的新闻站</span>
@@ -275,7 +274,7 @@
                             <div id="page2" style="display: none;">
                                 <div class="row">
                                     <div class="col">
-                                        <a id="link-url-4" href="https://al2so43.github.io/nav/" target="_blank">
+                                        <a id="link-url-4" href="./site/nav/index.html" target="_blank">
                                             <div class="link-card cards">
                                                 <i id="link-icon-4" class="fa-solid fa-compass"></i>
                                                 <span class="link-name" id="link-name-4">硫酸铝的导航站</span>
@@ -283,7 +282,7 @@
                                         </a>
                                     </div>
                                     <div class="col 2">
-                                        <a id="link-url-6" href="https://al2so43.github.io/music/" target="_blank">
+                                        <a id="link-url-6" href="./site/music/index.html" target="_blank">
                                             <div class="link-card cards">
                                                 <i id="link-icon-6" class="fa-solid fa-music"></i>
                                                 <span class="link-name" id="link-name-6">硫酸铝的音乐站</span>
@@ -291,7 +290,7 @@
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <a id="link-url-6" href="https://al2so43.github.io/backstage/" target="_blank">
+                                        <a id="link-url-6" href="./site/backstage/index.html" target="_blank">
                                             <div class="link-card cards">
                                                 <i id="link-icon-6" class="fa-solid fa-laptop"></i>
                                                 <span class="link-name" id="link-name-6">硫酸铝的管理站</span>
@@ -302,23 +301,23 @@
                                 <!--第四组-->
                                 <div class="row" style="margin-top: 1.5rem;">
                                     <div class="col">
-                                        <a id="link-url-4" href="https://al2so43.github.io/teach/" target="_blank">
+                                        <a id="link-url-4" href="./site/teach/index.html" target="_blank">
                                             <div class="link-card cards">
-                                                <i id="link-icon-4" class="fa-solid fa-book"></i>
+                                                <i id="link-icon-4" class="fa-solid fa-book-bookmark"></i>
                                                 <span class="link-name" id="link-name-4">硫酸铝的教程站</span>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="col 2">
-                                        <a id="link-url-5" href="https://al2so43.github.io/project/" target="_blank">
+                                        <a id="link-url-5" href="./site/project/index.html" target="_blank">
                                             <div class="link-card cards">
-                                                <i id="link-icon-5" class="fa-solid fa-file-archive"></i>
+                                                <i id="link-icon-5" class="fa-solid fa-flask"></i>
                                                 <span class="link-name" id="link-name-5">硫酸铝的项目站</span>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <a id="link-url-5" href="https://al2so43.github.io/monitor/" target="_blank">
+                                        <a id="link-url-5" href="./site/monitor/index.html" target="_blank">
                                             <div class="link-card cards">
                                                 <i id="link-icon-5" class="fa-solid fa-desktop"></i>
                                                 <span class="link-name" id="link-name-5">硫酸铝的监测站</span>
@@ -383,21 +382,21 @@
                 <!--网站链接-->
                 <div class="row">
                     <div class="col">
-                        <a href="https://al2so43.github.io/backstage/WebsiteRelatedIntroduction.html" target="_blank">
+                        <a href="./site/backstage/WebsiteRelatedIntroduction.html" target="_blank">
                             <div class="link-card cards">
                                 <span class="link-name">相关介绍</span>
                             </div>
                         </a>
                     </div>
                     <div class="col 2">
-                        <a href="https://al2so43.github.io/backstage/WebsiteUserAgreement.html" target="_blank">
+                        <a href="./site/backstage/WebsiteUserAgreement.html" target="_blank">
                             <div class="link-card cards">
                                 <span class="link-name">用户协议</span>
                             </div>
                         </a>
                     </div>
                     <div class="col">
-                        <a href="https://al2so43.github.io/backstage/WebsiteInstructions.html" target="_blank">
+                        <a href="./site/backstage/WebsiteInstructions.html" target="_blank">
                             <div class="link-card cards">
                                 <span class="link-name">功能说明</span>
                             </div>
@@ -413,7 +412,7 @@
                         </a>
                     </div>
                     <div class="col 2">
-                        <a href="https://al2so43.github.io/update/" target="_blank">
+                        <a href="./update/index.html" target="_blank">
                             <div class="link-card cards">
                                 <span class="link-name">兼容问题</span>
                             </div>
@@ -441,7 +440,7 @@
                             <span class="img-title-big" id="logo-title-other">Al2(SO4)3</span>
                             <span class="img-text" id="logo-title-other-small">.website</span><br />
                             <span class="img-text">&nbsp;v&nbsp;2.24&nbsp;</span>
-                            <a href="https://pages.github.com/" target="_blank">
+                            <a href="https://starxn.com/" target="_blank">
                                 <i class="fa fa-server"></i>
                             </a>
                         </div>
@@ -551,13 +550,13 @@
                     <script>
                         document.write((new Date()).getFullYear());
                     </script>
-                    <strong><span>Al2(SO4)3-硫酸铝丨</span><a href="https://al2so43.github.io/website" id="power-text">『刷新网页』</a><strong>
+                    <strong><span>Al2(SO4)3-硫酸铝丨</span><a href="index.html" id="power-text">『刷新网页』</a><strong>
                 </span></strong>
             <!-- 以下信息请不要修改哦 -->
             <!--                <span id="made">&amp;&nbsp;Made&nbsp;by&nbsp;<a href="https://github.com/imsyy/home"-->
             <!--                        target="_blank">imsyy</a></span>-->
             <!-- 站点备案 -->
-            <!--<a href="https://pages.github.com/" id="beian" target="_blank">&amp;&nbsp;&nbsp;&nbsp;本网站及其所有子网站均部署于『Github Pages』</a>-->
+            <!--<a href="https://pages.github.com/" id="beian" target="_blank">&amp;&nbsp;&nbsp;&nbsp;本网站及其所有子网站均部署于『星辰云』</a>-->
             <strong><span id="beian">&amp;&nbsp;&nbsp;&nbsp;<span id="timer">本网站已正常运行0天0小时0分钟0秒!</span></span></strong>
         </div>
         <!-- 歌词显示 -->
