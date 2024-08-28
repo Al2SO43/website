@@ -142,7 +142,7 @@ $.ajax({
                 timeout: 8000,
                 icon: "fa-solid fa-circle-exclamation",
                 displayMode: 'replace',
-                message: '音乐播放器加载失败'
+                message: '音乐播放器加载失败!'
             });
         }, 3800);
     }

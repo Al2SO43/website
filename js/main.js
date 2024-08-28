@@ -149,14 +149,14 @@ $('#upWeather').click(function () {
                 iziToast.show({
                     timeout: 2000,
                     icon: "fa-solid fa-cloud-sun",
-                    message: '实时天气已更新!'
+                    message: '正在尝试刷新天气预报,请稍候!'
                 });
             })
     } else {
         iziToast.show({
             timeout: 2000,
             icon: "fa-solid fa-cloud-sun",
-            message: '实时天气已更新!'
+            message: '正在尝试刷新天气预报,请稍候!'
         });
     }
 });
