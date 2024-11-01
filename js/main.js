@@ -420,15 +420,15 @@ function updateTimer() {
 setInterval(updateTimer, 1000);
 updateTimer();
 function getWeather() {
-fetch('https://api.oioweb.cn/api/weather/GetWeather')
+fetch('https://api.vvhan.com/api/weather')
   .then(response => response.json())
   .then(data => {
-    const city = data.result.city.Province;
-    const Degree = data.result.condition.max_degree;
-    const windPower = data.result.condition.day_wind_power;
-    const windDirection = data.result.condition.day_wind_direction;
-    const weather = data.result.condition.day_weather_short;
-    const mindegree = data.result.condition.min_degree;
+    const city = data.city.replace("市", ""); // 去掉“市”字
+    const Degree = parseInt(data.data.high); // 获取最高温度
+    const mindegree = parseInt(data.data.low); // 获取最低温度
+    const windPower = (parseInt(data.data.fengli.split('-')[0]) + parseInt(data.data.fengli.split('-')[1])) / 2; // 风力平均值
+    const windDirection = data.data.fengxiang; // 风向
+    const weather = data.data.type; // 天气状况
 
     document.getElementById('city_text').innerText = `${city}丨`;
     document.getElementById('wea_text').innerText = `${weather}`;
