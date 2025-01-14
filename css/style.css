@@ -264,13 +264,13 @@ span#change {
     margin: 2px 12px;
 }
 .link .feishu-svg {
-    width: 36px; 
-    height: 36px; 
+    width: 2.25rem; 
+    height: 2.25rem; 
     vertical-align: middle; 
-    margin: 0 8.4px;
-    margin-bottom: 4.05px;
-    margin-top: 2.45px;
-    margin-right:16px;
+    margin: 0 0.525rem;
+    margin-bottom: 0.253125rem;
+    margin-top: 0.153125rem;
+    margin-right:1.2rem;
     transform: scale(0.9);
 }
 
