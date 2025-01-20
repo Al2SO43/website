@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <!-- 基础信息 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <!-- 强制 HTTPS，若不需要可删除，但可能出现问题 -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#424242"/>
+    <meta name="description" content="『硫酸铝的个人网站』" />
+    <meta name="keywords" content="『硫酸铝的个人网站』" />
+    <meta name="author" content="Al2(SO4)3" />
+    <title>『硫酸铝的个人网站』</title>
+    <!-- jQuery -->
+    <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.5.1/jquery.min.js"></script>
+    <!-- HarmonyOS Sans -->
+    <!-- https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css -->
+    <link rel="stylesheet" href="https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css"/>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" type="text/css"
+          href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.1.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/mobile.css" />
+    <link rel="stylesheet" type="text/css" href="./css/loading.css" />
+    <link rel="stylesheet" type="text/css" href="./css/animation.css" />
+    <link rel="icon" href="./img/icon/favicon.ico" />
+    <link rel="apple-touch-icon" href="./img/icon/favicon.ico" />
+    <!-- Izitoast -->
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/css/iziToast.min.css" />
+    <script type="text/javascript"
+            src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/js/iziToast.min.js" >
+    </script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <!-- Aplayer -->
+    <link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/aplayer/1.10.1/APlayer.min.css"
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/aplayer/1.10.1/APlayer.min.js" crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-2WVH35V11W"></script>-->
+
+    <!-- <script src="./js/Meting.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- IE Out -->
+    <script>
+        if ( /*@cc_on!@*/ false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href =
+            "https://al2so43.github.io/update/" + encodeURIComponent(window.location.href);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-2WVH35V11W');
+    </script>
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json" />
+</head>
+
+<body>
+<!--加载动画-->
+<div id="loading-box">
+    <div class="loading-left-bg"></div>
+    <div class="loading-right-bg"></div>
+    <div class="spinner-box">
+        <div class="loader">
+            <div class="inner one"></div>
+            <div class="inner two"></div>
+            <div class="inner three"></div>
+        </div>
+        <div class="loading-word">
+            <p class="loading-title" id="loading-title">『硫酸铝的个人网站』</p>
+            <span id="loading-text">正在加载中......</span>
+        </div>
+    </div>
+</div>
+<section id="section" class="section">
+    <!-- 背景图片 -->
+    <div class="bg-all">
+        <img id="bg" onerror="this.classList.add('error');" />
+        <div class="cover"></div>
+    </div>
+    <!-- 鼠标指针 -->
+    <div id="g-pointer-1"></div>
+    <div id="g-pointer-2"></div>
+    <!-- 主体内容 -->
+    <main id="main" class="main">
+        <div class="container" id="container">
+            <div class="row" id="row">
+                <div class="col left">
+                    <!--基本信息-->
+                    <div class="main-left">
+                        <!--Logo-->
+                        <div class="main-img">
+                            <img id="logo-img" src="./img/icon/avatar.jpg" alt="img" />
+                            <div class="img-title">
+                                <span class="img-title-big" id="logo-text-1">Al2(SO4)3</span>
+                                <span class="img-text" id="logo-text-2">.top</span>
+                            </div>
+                        </div>
+                        <!--介绍信息-->
+                        <div class="message cards" id="switchmore">
+                            <div class="des" id="des">
+                                <i class="fa-solid fa-quote-left"></i>
+                                <div class="des-title"><span id="change">Welcome&nbsp;to&nbsp;the&nbsp;personal&nbsp;website&nbsp;of&nbsp;Al2(SO4)3&nbsp;!</span><br /><span
+                                        id="change1"></span>欢迎来到『硫酸铝的个人网站』!<br />您可以在这里查阅相关信息!</div>
+                                <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                        </div>
+                        <!--社交链接-->
+                        <div class="social" id="social">
+                            <a href="https://github.com/Al2SO43" class="link" id="github" style="margin-left: 4px"
+                               target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://wpa.qq.com/msgrd?v=3&uin=2751741509&site=qq&menu=yes" class="link"
+                               id="qq" target="_blank">
+                                <i class="fa-brands fa-qq"></i>
+                            </a>
+                            <a href="mailto: laokafei2022@163.com" class="link" id="email" target="_blank">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                            <a href="https://space.bilibili.com/1575628733" class="link" id="bilibili"
+                               target="_blank">
+                                <i class="fa-brands fa-bilibili"></i>
+                            </a>
+                            <a href="https://www.feishu.cn/invitation/page/add_contact/?token=5a1i2fd8-1a63-487b-bd2c-c97d9955ac13&amp;unique_id=q60rW8M3gyJcGOsNyVSKDQ==" class="link" id="feishu" target="_blank">
+                                <img src="./img/icon/Feishu.svg" class="feishu-svg">
+                            </a>
+                            <a id="link-text">硫酸铝的联系方式</a>
+                        </div>
+                    </div>
+                </div>
+                <!--第二屏 Logo-->
+                <div class="logo cards" style="display: none" id="changemore">
+                    <a class="logo-text" id="logo-text-small">Al2(SO4)3.project</a>
+                </div>
+                <div class="col right">
+                    <div class="main-right">
+                        <!--功能区-->
+                        <div class="row rightone" id="rightone">
+                            <div class="col hitokotos">
+                                <!--一言-->
+                                <div class="hitokoto cards" id="hitokoto">
+                                    <!--切换音乐-->
+                                    <div class="open-music fixed-top" id="open-music">
+                                        <i class="fa-solid fa-compact-disc"></i>
+                                        <span>&nbsp;打开音乐播放器</span>
+                                    </div>
+                                    <!--切换音乐结束-->
+                                    <div class="hitokoto-all">
+                                        <div class="hitokoto-text"><span
+                                                id="hitokoto_text">这个每日名言似乎出了些小问题.</span>
+                                        </div>
+                                        <div class="hitokoto-from">---「&nbsp;<span id="from_text">Al2(SO4)3-硫酸铝</span>&nbsp;」
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--音乐-->
+                                <div class="music" id="music">
+                                    <div class="music-all">
+                                        <div class="music-button">
+                                            <div id="music-open">音乐列表</div>
+                                            <div id="music-close">回到名言</div>
+                                        </div>
+                                        <div class="music-control">
+                                            <i class="fa-solid fa-backward-step" id="last"></i>
+                                            <div id="play">
+                                                <i class="fa-solid fa-play"></i>
+                                            </div>
+                                            <i class="fa-solid fa-forward-step" id="next"></i>
+                                        </div>
+                                        <div class="music-menu">
+                                            <div class="music-text">
+                                                <span id="music-name">未播放任何音乐</span>
+                                            </div>
+                                            <div class="music-volume" style="display: none;">
+                                                <div id="volume-ico">
+                                                    <i class="fa-solid fa-volume-low"></i>
+                                                </div>
+                                                <input type="range" min="0" max="1" step="0.01" id="volume" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col times">
+                                <!--时间-->
+                                <div class="time cards" id="upWeather">
+                                    <div class="timeshow" id="time">
+                                        2000&nbsp;年&nbsp;0&nbsp;月&nbsp;00&nbsp;日&nbsp;<span
+                                            class="weekday">星期一</span><br /><span class="time-text">00:00:00</span>
+                                    </div>
+                                    <div class="weather">
+                                        <span id="city_text">实时&nbsp;</span>
+                                        <span id="wea_text">天气</span>&nbsp;
+                                        <span id="tem_text">信息</span>
+                                        <span id="win_text">&nbsp;获取</span>
+                                        <span id="win_speed">&nbsp;失败</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--分隔线-->
+                        <div class="line">
+                            <i class="fa-solid fa-link"></i>
+                            <span class="line-text">硫酸铝的网站列表&nbsp;丨</span>
+                            <span class="total-pages" id="totalpages">第1/2页</span>
+                            <button id="page-toggle"><i class="fa-solid fa-retweet">&nbsp;</i></button>
+                        </div>
+                        <!--网站链接-->
+                        <div class="link">
+                            <!--第一组-->
+                            <div id="page1">
+                            <div class="row">
+                                <div class="col">
+                                    <a id="link-url-1" href="https://al2so43.github.io/start/" target="_blank">
+                                        <div class="link-card cards">
+                                            <i id="link-icon-1" class="fa-solid fa-search"></i>
+                                            <span class="link-name" id="link-name-1">硫酸铝的起始站</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col 2">
+                                    <a id="link-url-2" href="https://al2so43.github.io/download/" target="_blank">
+                                        <div class="link-card cards">
+                                            <i id="link-icon-2" class="fa-solid fa-cloud"></i>
+                                            <span class="link-name" id="link-name-2">硫酸铝的下载站</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a id="link-url-3" href="https://al2so43.github.io/hot/" target="_blank">
+                                        <div class="link-card cards">
+                                            <i id="link-icon-3" class="fa-solid fa-fire"></i>
+                                            <span class="link-name" id="link-name-3">硫酸铝的热榜站</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--第二组-->
+                            <div class="row" style="margin-top: 1.5rem;">
+                                <div class="col">
+                                    <a id="link-url-4" href="https://al2so43.github.io/blog/" target="_blank">
+                                        <div class="link-card cards">
+                                            <i id="link-icon-4" class="fa-solid fa-blog"></i>
+                                            <span class="link-name" id="link-name-4">硫酸铝的博客站</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col 2">
+                                    <a id="link-url-5" href="https://al2so43.github.io/code/" target="_blank">
+                                        <div class="link-card cards">
+                                            <i id="link-icon-5" class="fa-solid fa-code"></i>
+                                            <span class="link-name" id="link-name-5">硫酸铝的代码站</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a id="link-url-6" href="https://al2so43.github.io/news/" target="_blank">
+                                        <div class="link-card cards">
+                                            <i id="link-icon-6" class="fa-solid fa-newspaper"></i>
+                                            <span class="link-name" id="link-name-6">硫酸铝的新闻站</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            </div>
+                            <!--第三组-->
+                            <div id="page2" style="display: none;">
+                                <div class="row">
+                                    <div class="col">
+                                        <a id="link-url-4" href="https://al2so43.github.io/nav/" target="_blank">
+                                            <div class="link-card cards">
+                                                <i id="link-icon-4" class="fa-solid fa-compass"></i>
+                                                <span class="link-name" id="link-name-4">硫酸铝的导航站</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col 2">
+                                        <a id="link-url-6" href="https://al2so43.github.io/music/" target="_blank">
+                                            <div class="link-card cards">
+                                                <i id="link-icon-6" class="fa-solid fa-music"></i>
+                                                <span class="link-name" id="link-name-6">硫酸铝的音乐站</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a id="link-url-6" href="https://al2so43.github.io/backstage/" target="_blank">
+                                            <div class="link-card cards">
+                                                <i id="link-icon-6" class="fa-solid fa-laptop"></i>
+                                                <span class="link-name" id="link-name-6">硫酸铝的管理站</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--第四组-->
+                                <div class="row" style="margin-top: 1.5rem;">
+                                    <div class="col">
+                                        <a id="link-url-4" href="https://al2so43.github.io/teach/" target="_blank">
+                                            <div class="link-card cards">
+                                                <i id="link-icon-4" class="fa-solid fa-book-bookmark"></i>
+                                                <span class="link-name" id="link-name-4">硫酸铝的教程站</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col 2">
+                                        <a id="link-url-5" href="https://al2so43.github.io/project/" target="_blank">
+                                            <div class="link-card cards">
+                                                <i id="link-icon-5" class="fa-solid fa-flask"></i>
+                                                <span class="link-name" id="link-name-5">硫酸铝的项目站</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a id="link-url-5" href="https://al2so43.github.io/monitor/" target="_blank">
+                                            <div class="link-card cards">
+                                                <i id="link-icon-5" class="fa-solid fa-desktop"></i>
+                                                <span class="link-name" id="link-name-5">硫酸铝的监测站</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--展开菜单按钮-->
+            <div class="menu" id="switchmenu">
+                <a class="munu-button cards" id="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+            <!--更多内容-->
+            <div class="more" id="more">
+                <!--关闭按钮-->
+                <div class="close fixed-top" id="close">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+                <div class="line" style="margin-top: 1rem;">
+                    <i class="fa-solid fa-angle-left"></i>
+                    <span class="line-text">时间统计</span>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div class="date" id="date">
+                    <div class="item" id="dayProgress">
+                        <div class="date-text" style="margin-top: 0rem;">今日已经度过了&nbsp;<span></span>&nbsp;小时
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                    <div class="item" id="weekProgress">
+                        <div class="date-text">本周已经度过了&nbsp;<span></span>&nbsp;天</div>
+                        <div class="progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                    <div class="item" id="monthProgress">
+                        <div class="date-text">本月已经度过了&nbsp;<span></span>&nbsp;天</div>
+                        <div class="progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                    <div class="item" id="yearProgress">
+                        <div class="date-text">今年已经度过了&nbsp;<span></span>&nbsp;个月</div>
+                        <div class="progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line">
+                    <i class="fa-solid fa-angle-left"></i>
+                    <span class="line-text">网站说明</span>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <!--网站链接-->
+                <div class="row">
+                    <div class="col">
+                        <a href="https://al2so43.github.io/backstage/WebsiteRelatedIntroduction.html" target="_blank">
+                            <div class="link-card cards">
+                                <span class="link-name">相关介绍</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col 2">
+                        <a href="https://al2so43.github.io/backstage/WebsiteUserAgreement.html" target="_blank">
+                            <div class="link-card cards">
+                                <span class="link-name">用户协议</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="https://al2so43.github.io/backstage/WebsiteInstructions.html" target="_blank">
+                            <div class="link-card cards">
+                                <span class="link-name">功能说明</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 1.5rem;">
+                    <div class="col">
+                        <a href="404.html" target="_blank">
+                            <div class="link-card cards">
+                                <span class="link-name">错误界面</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col 2">
+                        <a href="https://al2so43.github.io/update/" target="_blank">
+                            <div class="link-card cards">
+                                <span class="link-name">兼容问题</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a id="openmore">
+                            <div class="link-card cards">
+                                <span class="link-name">更多选项</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--更多页面-->
+            <div class="box" id="box" style="display: none">
+                <div class="box-wrapper">
+                    <!--关闭按钮-->
+                    <div class="closebox fixed-top" id="closemore">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <!--左侧内容-->
+                    <div class="box-left">
+                        <div class="img-title">
+                            <span class="img-title-big" id="logo-title-other">Al2(SO4)3</span>
+                            <span class="img-text" id="logo-title-other-small">.website</span><br />
+                            <span class="img-text">&nbsp;v&nbsp;2.24&nbsp;</span>
+                            <a href="https://pages.github.com/" target="_blank">
+                                <i class="fa fa-server"></i>
+                            </a>
+                        </div>
+                        <!--更多内容 -->
+                        <div class="accordion" id="accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                        壁纸设置
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                     aria-labelledby="headingOne" data-bs-parent="#accordion">
+                                    <div class="accordion-body">
+                                        <div class="set">
+                                            <div class="wallpaper" id="wallpaper">
+                                                <div class="form-radio">
+                                                    <input type="radio" class="set-wallpaper" style="display: none;"
+                                                           id="radio1" value="1" name="wallpaper-type" />
+                                                    <label for="radio1">默认壁纸</label>
+                                                </div>
+                                                <div class="form-radio">
+                                                    <input type="radio" class="set-wallpaper" style="display: none;"
+                                                           id="radio6" value="6" name="wallpaper-type" />
+                                                    <label for="radio6">本地背景</label>
+                                                </div>
+                                                <div class="form-radio">
+                                                    <input type="radio" class="set-wallpaper" style="display: none;"
+                                                           id="radio2" value="2" name="wallpaper-type" />
+                                                    <label for="radio2" id="wallpaper_text1">必应每日</label>
+                                                </div>
+                                                <div class="form-radio">
+                                                    <input type="radio" class="set-wallpaper" style="display: none;"
+                                                           id="radio3" value="3" name="wallpaper-type" />
+                                                    <label for="radio3" id="wallpaper_text2">高清风景</label>
+                                                </div>
+                                                <div class="form-radio">
+                                                    <input type="radio" class="set-wallpaper" style="display: none;"
+                                                           id="radio4" value="4" name="wallpaper-type" />
+                                                    <label for="radio4" id="wallpaper_text3">随机萌图</label>
+                                                </div>
+                                                <div class="form-radio">
+                                                    <input type="radio" class="set-wallpaper" style="display: none;"
+                                                           id="radio5" value="5" name="wallpaper-type" />
+                                                    <label for="radio5" id="wallpaper_text3">七濑胡桃</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--更新日志-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                        更新日志
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                     aria-labelledby="headingTwo" data-bs-parent="#accordion">
+                                    <div class="accordion-body">
+                                        <div class="upnote">
+                                                <span class="uptext">
+                                                    <i class="fa-solid fa-circle-plus"></i>&nbsp;更新网站管理文档
+                                                </span>
+                                            <span class="uptext">
+                                                    <i class="fa-solid fa-circle-plus"></i>&nbsp;完善升级站内容
+                                                </span>
+                                            <span class="uptext">
+                                                    <i class="fa-solid fa-circle-plus"></i>&nbsp;更新起始站壁纸
+                                                </span>
+                                            <span class="uptext">
+                                                    <i class="fa-solid fa-screwdriver-wrench"></i>&nbsp;修复手机屏幕兼容问题
+                                                </span>
+                                            <span class="uptext">
+                                                    <i class="fa-solid fa-screwdriver-wrench"></i>&nbsp;修复音乐组件加载问题
+                                                </span>
+                                            <span class="uptext">
+                                                    <i class="fa-solid fa-screwdriver-wrench"></i>&nbsp;修复图标显示问题
+                                                </span>
+                                            <span class="uptext">
+                                                    <i class="fa-solid fa-screwdriver-wrench"></i>&nbsp;修复其它已知问题</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Aplayer-->
+                    <div class="box-right">
+                        <div id="aplayer">
+                            <span>音乐播放器加载失败</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- 版权信息 -->
+    <footer id="footer" class="fixed-bottom footer">
+        <div class="power">
+                <strong><span id="power">Copyright&nbsp;&copy;
+                    <script>
+                        document.write((new Date()).getFullYear());
+                    </script>
+                    <span>Al2(SO4)3-硫酸铝&ensp;丨<a href="https://al2so43.github.io/website" id="power-text">『刷新网页』</a>
+                </span></strong>
+            <!-- 以下信息请不要修改哦 -->
+            <!--                <span id="made">&amp;&nbsp;Made&nbsp;by&nbsp;<a href="https://github.com/imsyy/home"-->
+            <!--                        target="_blank">imsyy</a></span>-->
+            <!-- 站点备案 -->
+            <!--<a href="https://pages.github.com/" id="beian" target="_blank">&amp;&nbsp;&nbsp;&nbsp;本网站及其所有子网站均部署于『Github Pages』</a>-->
+            <strong><span id="beian">&amp;&nbsp;&nbsp;&nbsp;<span id="timer">本网站已正常运行0天0小时0分钟0秒!</span></span></strong>
+        </div>
+        <!-- 歌词显示 -->
+        <div id="lrc"></div>
+    </footer>
+</section>
+<!-- sw.js -->
+<script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+            navigator.serviceWorker.register("sw.js");
+        });
+    }
+</script>
+<!-- noscript -->
+<noscript>
+    <div class="noscript fixed-top">温馨提示:您的浏览器未开启JavaScript!<br />本网站需要使用JavaScript功能,请您理解!</div>
+</noscript>
+<!-- JS -->
+<script type="text/javascript" src="./js/main.js"></script>
+<script type="text/javascript" src="./js/set.js"></script>
+<script type="text/javascript" src="./js/time.js"></script>
+<script type="text/javascript" src="./js/js.cookie.js"></script>
+<script type="text/javascript"
+        src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.1.0/js/bootstrap.min.js">
+</script>
+</body>
+
+</html>
