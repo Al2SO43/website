@@ -140,23 +140,27 @@ $('#hitokoto').click(function () {
     }
 });
 
-let canUpdateWeather = false;
+let canUpdateWeather = 0;
 $('#upWeather').click(function () {
-    if (canUpdateWeather) {
-        canUpdateWeather = false;
-        getWeather()
-            .then(() => {
-                iziToast.show({
+    if (canUpdateWeather == 0) {
+        canUpdateWeather = 1;
+        let index = setInterval(function () {
+            canUpdateWeather--;
+            if (canUpdateWeather == 0) {
+                clearInterval(index);
+            }
+        }, 1000);
+        iziToast.show({
                     timeout: 2000,
                     icon: "fa-solid fa-cloud-sun",
                     message: '正在尝试刷新天气预报,请稍候!'
                 });
-            })
+        getWeather();
     } else {
         iziToast.show({
-            timeout: 2000,
-            icon: "fa-solid fa-cloud-sun",
-            message: '正在尝试刷新天气预报,请稍候!'
+            timeout: 1000,
+            icon: "fa-solid fa-circle-exclamation",
+            message: '您的刷新速度过快,请稍后再试!'
         });
     }
 });
@@ -419,6 +423,7 @@ function updateTimer() {
 }
 setInterval(updateTimer, 1000);
 updateTimer();
+
 function getWeather() {
 fetch('https://api.vvhan.com/api/weather')
   .then(response => response.json())
