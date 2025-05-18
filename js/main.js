@@ -1,10 +1,3 @@
-/*
-作者: imsyy
-主页：https://www.imsyy.top/
-GitHub：https://github.com/imsyy/home
-版权所有，请勿删除
-*/
-
 //弹窗样式
 iziToast.settings({
     timeout: 10000,
@@ -57,7 +50,7 @@ window.addEventListener('load', function () {
             timeout: 2500,
             icon: false,
             title: hello,
-            message: '欢迎来到『硫酸铝的个人网站』!<br />网页模板作者:<a href="https://github.com/imsyy/home" target="_blank">Imsyy</a>!'
+            message: '欢迎来到『硫酸铝的个人网站』!<br />本网站管理员:<a href="./index.html">Al2(SO4)3-硫酸铝</a>!'
         });
     }, 800);
 
@@ -65,7 +58,7 @@ window.addEventListener('load', function () {
         iziToast.show({
             timeout: 2500,
             icon: "fa-solid fa-file-word",
-            message: '请在阅读<a href="https://al2so43.github.io/backstage/" target="_blank">『硫酸铝的管理站』</a>中的网站管理文档之后浏览本站内容!<br />否则因各种原因发生的任何问题的后果将全部由您承担!'
+            message: '请在阅读<a href="./site/manager/index.html" target="_blank">『硫酸铝的管理站』</a>中的网站管理文档之后浏览本站内容!<br />否则因各种原因发生的任何问题的后果将全部由您承担!'
         });
     }, 3000);
     //延迟加载音乐播放器
@@ -151,7 +144,7 @@ $('#upWeather').click(function () {
             }
         }, 1000);
         iziToast.show({
-                    timeout: 2000,
+                    timeout: 800,
                     icon: "fa-solid fa-cloud-sun",
                     message: '正在尝试刷新天气预报,请稍候!'
                 });
@@ -255,7 +248,7 @@ for (let day of days) {
         window.addEventListener('load', function () {
             setTimeout(function () {
                 iziToast.show({
-                    timeout: 14000,
+                    timeout: 24000,
                     icon: "fa-solid fa-clock",
                     message: '今天是一个特殊的日子,本站将在今天切换为黑白模式!<br />请前往<a href="https://www.lssjt.com/" target="_blank">『历史上的今天』</a>了解更多信息!'
                 });
@@ -434,13 +427,13 @@ fetch('https://api.vvhan.com/api/weather')
     const windPower = (parseInt(data.data.fengli.split('-')[0]) + parseInt(data.data.fengli.split('-')[1])) / 2; // 风力平均值
     const windDirection = data.data.fengxiang; // 风向
     const weather = data.data.type; // 天气状况
-
+    
     document.getElementById('city_text').innerText = `${city}丨`;
     document.getElementById('wea_text').innerText = `${weather}`;
     document.getElementById('tem_text').innerText = `${mindegree}°C-${Degree}°C`;
     document.getElementById('win_text').innerText = `丨${windDirection}`;
     document.getElementById('win_speed').innerText = `${windPower}级`;
-  })
-  .catch(console.error);
+    })
+    .catch(console.error);
 }
 getWeather();
