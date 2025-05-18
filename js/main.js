@@ -50,7 +50,7 @@ window.addEventListener('load', function () {
             timeout: 2500,
             icon: false,
             title: hello,
-            message: '欢迎来到『硫酸铝的个人网站』!<br />本网站管理员:<a href="./index.html">Al2(SO4)3-硫酸铝</a>!'
+            message: '欢迎来到『硫酸铝的个人网站』!<br />本网站管理员:<a href="https://al2so43.github.io/website/">Al2(SO4)3-硫酸铝</a>!'
         });
     }, 800);
 
@@ -58,7 +58,7 @@ window.addEventListener('load', function () {
         iziToast.show({
             timeout: 2500,
             icon: "fa-solid fa-file-word",
-            message: '请在阅读<a href="./site/manager/index.html" target="_blank">『硫酸铝的管理站』</a>中的网站管理文档之后浏览本站内容!<br />否则因各种原因发生的任何问题的后果将全部由您承担!'
+            message: '请在阅读<a href="https://al2so43.github.io/backstage/" target="_blank">『硫酸铝的管理站』</a>中的网站管理文档之后浏览本站内容!<br />否则因各种原因发生的任何问题的后果将全部由您承担!'
         });
     }, 3000);
     //延迟加载音乐播放器
